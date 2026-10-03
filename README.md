@@ -1,1 +1,1 @@
-My First Discord Bot
+My Discord Bot
