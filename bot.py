@@ -1,6 +1,7 @@
 import discord
 
 from logic import gen_pass
+from yazitura import yazi_tura
 # ayricaliklar (intents) değişkeni botun ayrıcalıklarını depolayacak
 intents = discord.Intents.default()
 # Mesajları okuma ayrıcalığını etkinleştirelim
@@ -22,6 +23,8 @@ async def on_message(message):
         await message.channel.send("\U0001f642")
     elif message.content.startswith('şifre'):
         await message.channel.send(gen_pass(10))
+    elif message.content.startswith('yazı tura'):
+        await message.channel.send(yazi_tura())
     else:
         await message.channel.send(message.content)
 
